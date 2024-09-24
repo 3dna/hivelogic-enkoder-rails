@@ -57,7 +57,7 @@ module EnkoderRails
         js = "var kode=\n"+js_wrap_quote(js_dbl_quote(kode),79)
         js = js+"\n;var i,c,x;while(eval(kode));"
         js = "function hivelogic_enkoder(){"+js+"}hivelogic_enkoder();"
-        js = '<script type="text/javascript">'+"\n/* <![CDATA[ */\n"+js
+        js = '<script type="text/javascript" data-cookieconsent="ignore">'+"\n/* <![CDATA[ */\n"+js
         js = js+"\n/* ]]> */\n</script>"
         result = js unless result.length>max_length
       end
